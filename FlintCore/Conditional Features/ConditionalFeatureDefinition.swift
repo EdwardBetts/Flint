@@ -19,6 +19,8 @@ public protocol ConditionalFeatureDefinition: FeatureDefinition {
     /// Called to define the requirements of this feature
     /// - see: `FeatureConstraintsBuilder` for the functions you can call to define constraints
     static func constraints(requirements: FeatureConstraintsBuilder)
+
+    static var isEnabled: Bool? { get }
 }
 
 public extension ConditionalFeatureDefinition {
