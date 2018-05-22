@@ -79,7 +79,7 @@ public class DefaultFeatureConstraintsEvaluator: ConstraintsEvaluator {
         
         if let constraints = knownConstraints {
             for platformConstraint in constraints.currentPlatforms.values {
-                // Only add evaluator for our current platform
+                // Only add evaluators for our current platform
                 if platformConstraint.platform.isCurrentPlatform && platformConstraint.version.isCurrentCompatible {
                     satisfiedPlatforms[platformConstraint.platform] = platformConstraint
                 } else {
